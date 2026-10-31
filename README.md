@@ -1,11 +1,5 @@
-# Codex: API / Подписка
+# Codex API / Subscription
 
-Локальный переключатель: кнопка аккаунта в заголовке панели Codex, индикатор справа в status bar, Ctrl+Alt+Shift+A. Официальное расширение OpenAI не изменяется. Внутрь его webview рядом с моделью сторонняя кнопка не внедряется.
+Switch Codex between API billing and ChatGPT subscription access.
 
-API использует ранее сохранённый Windows DPAPI ключ; при его отсутствии открывается локальный ввод. Подписка использует штатный браузерный вход. Оба пути вызывают официальный CLI из установленного OpenAI Codex. После подтверждённого изменения предлагаются «Перезагрузить сейчас» и «Позже». Автоматической перезагрузки нет. Индикатор отражает сохранённый вход, а не биллинг уже выполняющегося запроса.
-
-Без перезагрузки всего VS Code можно использовать встроенное меню аккаунта Codex: Log out, затем Use API Key или Sign in with ChatGPT. Публичной команды для такого горячего переключения сторонним расширением в установленной версии нет. Переключайтесь между ответами; текущий запрос не переводится на другой способ оплаты задним числом.
-
-Нет npm dependencies, install scripts, телеметрии или модельных запросов. JS не читает auth.json; `login status` разбирается в памяти без вывода ключей. Helper передаёт ключ по stdin, хранит его вне проекта и проверяет `/v1/models` без inference. При закрытии VS Code процесс входа не отменяется автоматически.
-
-Sources: https://learn.chatgpt.com/docs/auth?surface=ide ; https://code.visualstudio.com/api/references/contribution-points ; https://code.visualstudio.com/docs/configure/extensions/extension-marketplace .
+The command is in the Codex title bar, the status bar, and `Ctrl+Alt+Shift+A`. Works on Windows, macOS, and Linux with the official OpenAI Codex VS Code extension installed. API keys are stored in VS Code Secret Storage. After a successful change, choose whether to reload VS Code now or later.

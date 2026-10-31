@@ -1,10 +1,9 @@
 {
   "name": "codex-auth-switch",
   "displayName": "Codex: API / Subscription",
-  "description": "Local authentication switch with an optional VS Code reload prompt.",
-  "version": "1.0.0",
+  "description": "Switch Codex between API billing and ChatGPT subscription access.",
+  "version": "1.1.0",
   "publisher": "wedoai-local",
-  "private": true,
   "license": "MIT",
   "engines": { "vscode": "^1.95.0" },
   "categories": ["Other"],
